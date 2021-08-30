@@ -44,4 +44,4 @@ jobs:
             pipenv install
       - run:
           command: |
-            pipenv run python manage.py test
+            pytest tests
