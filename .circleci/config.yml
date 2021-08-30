@@ -50,7 +50,7 @@ jobs:
       - run:
           name: PIPEMV SHELL
           command: |  # use pipenv to install dependencies
-            pipenv shell      
+            pipenv run pytest tests     
       - run:
           command: |
             pytest --version
