@@ -46,7 +46,11 @@ jobs:
       - run:
           name: Install DEPENDENCIES
           command: |  # use pipenv to install dependencies
-            pipenv install        
+            pipenv install
+      - run:
+          name: CHECK CHROME
+          command: |
+            google-chrome --version          
       - run:
           name: PIPEMV SHELL
           command: |  # use pipenv to install dependencies
