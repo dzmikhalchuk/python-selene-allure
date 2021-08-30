@@ -41,6 +41,7 @@ jobs:
       - run:
           command: |  # use pipenv to install dependencies
             sudo pip install pipenv
+            pipenv shell
       - run:
           command: |  # use pipenv to install dependencies
             pipenv install      
