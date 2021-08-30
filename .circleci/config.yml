@@ -44,13 +44,13 @@ jobs:
           command: |  # use pipenv to install dependencies
             sudo pip install pipenv
       - run:
+          name: Install DEPENDENCIES
+          command: |  # use pipenv to install dependencies
+            pipenv install        
+      - run:
           name: PIPEMV SHELL
           command: |  # use pipenv to install dependencies
             pipenv shell      
-      - run:
-          name: Install DEPENDENCIES
-          command: |  # use pipenv to install dependencies
-            pipenv install      
       - run:
           command: |
             pytest --version
