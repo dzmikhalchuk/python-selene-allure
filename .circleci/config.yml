@@ -35,14 +35,20 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install PIP
           command: |
             sudo apt update
             sudo apt install -y python3-pip
       - run:
+          name: Install PIPENV
           command: |  # use pipenv to install dependencies
             sudo pip install pipenv
-            pipenv shell
       - run:
+          name: PIPEMV SHELL
+          command: |  # use pipenv to install dependencies
+            pipenv shell      
+      - run:
+          name: Install DEPENDENCIES
           command: |  # use pipenv to install dependencies
             pipenv install      
       - run:
