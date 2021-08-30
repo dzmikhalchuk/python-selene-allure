@@ -7,6 +7,7 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
   python: circleci/python@1.2
   # allure: ayte/allure@0.1.3
+  browser-tools: circleci/browser-tools@1.2.1
 
 workflows:
   sample:  # This is the name of the workflow, feel free to change it to better match your workflow.
@@ -33,6 +34,8 @@ jobs:
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
     steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - checkout
       - run:
           name: Install PIP
