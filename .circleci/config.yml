@@ -41,7 +41,9 @@ jobs:
       - run:
           command: |  # use pipenv to install dependencies
             sudo pip install pipenv
-            pipenv install
+      - run:
+          command: |  # use pipenv to install dependencies
+            pipenv install      
       - run:
           command: |
-            py.test tests
+            pytest --version
