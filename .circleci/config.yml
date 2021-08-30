@@ -37,7 +37,7 @@ jobs:
       - run:
           command: |
             sudo apt update
-            sudo apt install -y python-pip python-dev
+            sudo apt install -y python3-pip
       - run:
           command: |  # use pipenv to install dependencies
             sudo pip install pipenv
