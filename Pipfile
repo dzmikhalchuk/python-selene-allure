@@ -8,6 +8,7 @@ pytest = "*"
 selene = "*"
 allure-pytest = "*"
 pytest-env = "*"
+delayed-assert = "*"
 
 [dev-packages]
 
